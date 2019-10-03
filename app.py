@@ -83,7 +83,8 @@ def record_video(preview=True):
         if preview:
             cv2.imshow("Frame", frame)
         with lock:
-            outputFrame = frame.copy()
+            if frame:
+                outputFrame = frame.copy()
             """
         # write frame to short video
         if v.f.isOpened() and v.t.getTimeSec() < 10:
