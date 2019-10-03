@@ -4,8 +4,8 @@ from dataclasses import dataclass
 
 @dataclass
 class VideoLimited:
-	f: cv2.VideoWriter
-	t: cv2.TickMeter
+	f: cv2.VideoWriter = cv2.VideoWriter()
+	t: cv2.TickMeter = cv2.TickMeter()
 
 cap = cv2.VideoCapture(0)
 if (cap.isOpened() == False): 
@@ -22,7 +22,7 @@ ff = cv2.VideoWriter(
 	(frame_width,frame_height)
 )
 
-v = VideoLimited(cv2.VideoWriter(), cv2.TickMeter())
+v = VideoLimited()
 
 while(True):
 	v.t.start()
@@ -43,7 +43,6 @@ while(True):
 	cv2.imshow("Frame", frame)
 
 	# write frame to short video
-	print(v.t.getTimeSec())
 	if v.f.isOpened() and v.t.getTimeSec() < 10:
 		v.f.write(frame)
 	else:
