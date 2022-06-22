@@ -11,5 +11,5 @@ opencv-contrib-python==4.1.1.26
 opencv-python==4.2.0.32
 requests==2.22.0
 slask==0.1.1
-urllib3==1.25.6
+urllib3==1.26.5
 Werkzeug==0.16.0
