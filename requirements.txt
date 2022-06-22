@@ -7,7 +7,7 @@ itsdangerous==1.1.0
 Jinja2==2.10.1
 MarkupSafe==1.1.1
 numpy==1.22.0
-opencv-contrib-python==4.1.1.26
+opencv-contrib-python==4.2.0.32
 opencv-python==4.2.0.32
 requests==2.22.0
 slask==0.1.1
